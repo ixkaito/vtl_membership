@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<% if notice %>
+	<p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+	<p class="alert alert-error"><%= alert %></p>
+<% end %>
+
+<p><%= link_to "HOME", root_path, :class => 'link_home' %></p>
+
 <%= yield %>
 
 </body>
