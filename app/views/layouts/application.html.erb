@@ -11,11 +11,11 @@
 <% if notice %>
 	<p class="alert alert-notice"><%= notice %></p>
 <% end %>
-<% if alert %>
+<% if alert && controller_name != 'sessions' %>
 	<p class="alert alert-error"><%= alert %></p>
 <% end %>
 
-<p><%= link_to "HOME", root_path, :class => 'link_home' %></p>
+<!-- <p><%= link_to "HOME", root_path, :class => 'link_home' %></p> -->
 
 <%= yield %>
 
