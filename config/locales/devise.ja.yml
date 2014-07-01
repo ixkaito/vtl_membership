@@ -52,7 +52,7 @@ ja:
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
       expired: "has expired, please request a new one"
-      not_found: "not found"
+      not_found: "見つかりませんでした。"
       not_locked: "was not locked"
       not_saved:
         one: "エラーにより、完了できません："
@@ -68,3 +68,5 @@ ja:
               invalid: "認証キーが不正です。"
             password:
               blank: "は必須項目です。"
+            password_confirmation:
+              confirmation: "パスワードが一致しません。"
