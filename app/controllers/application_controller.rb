@@ -5,4 +5,13 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
 
 	# before_action :authenticate_user!
+	before_action :require_agreement
+
+	private
+
+		def require_agreement
+			if user_signed_in? && current_user.agreement != true
+				redirect_to users_edit_path
+			end
+		end
 end

@@ -19,6 +19,27 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ja:
   hello: "Hello world"
-  updatede: "Updated!"
+  updated: "更新しました。"
+
+  activerecord:
+    attributes:
+      user:
+        agreement: "同意"
+        email: "メールアドレス"
+
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "は必須項目です。"
+            confirmation_token:
+              invalid: "認証キーが不正です。"
+            password:
+              blank: "は必須項目です。"
+            password_confirmation:
+              confirmation: "パスワードが一致しません。"
+            agreement:
+              accepted: "hogehoge"

@@ -1,0 +1,27 @@
+<%= form_for @user, url: users_path do |f| %>
+
+	<%= @user.errors.full_messages.join(" ") %>
+
+	<div><%= f.label :family_name %><br />
+		<%= f.text_field :family_name %></div>
+
+	<div><%= f.label :given_name %><br />
+		<%= f.text_field :given_name %></div>
+
+	<div><%= f.label :country %><br />
+		<%= f.text_field :country %></div>
+
+	<div><%= f.label :tel %><br />
+		<%= f.text_field :tel %></div>
+
+	<div><%= f.label :zipcode %><br />
+		<%= f.text_field :zipcode %></div>
+
+	<div><%= f.label :address %><br />
+		<%= f.text_field :address %></div>
+
+	<div><%= f.check_box :agreement %> 同意</div>
+
+	<div><%= f.submit %></div>
+
+<% end %>
