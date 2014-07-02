@@ -58,3 +58,5 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'rails-i18n'
+
+gem "recaptcha", require: 'recaptcha/rails'
