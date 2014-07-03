@@ -13,9 +13,9 @@ class UsersController < ApplicationController
 	def update
 		@user = current_user
 		if @user.update(user_params)
-			redirect_to users_edit_path, notice: I18n.t("updated")
+			redirect_to users_edit_path, notice: I18n.t('message.updated')
 		else
-			render "edit"
+			render :edit
 		end
 	end
 

@@ -26,11 +26,9 @@ ja:
   signup_submit: "登録"
   login: "ログイン"
   logout: "ログアウト"
-  user_info: "登録情報"
-  edit: "登録情報編集"
+  account_info: "アカウント情報"
+  edit: "アカウント情報編集"
   update: "更新"
-  link_to_reset_password: "パスワードを忘れた場合はこちら"
-  edit_user_registration: "メールアドレス／パスワード変更"
   cancel_my_account: "退会"
   button:
     login: "ログイン"
@@ -39,9 +37,13 @@ ja:
     update: "更新"
     cancel_my_account: "退会"
   link:
+    home: "ホーム"
+    edit_user_registration: "メールアドレス／パスワード変更"
+    reset_password: "パスワードを忘れた場合はこちら"
     back: "戻る"
   message:
     updated: "更新しました。"
+    enter_user_info: "アカウント情報を入力してください。"
     leave_blank: "（変更しない場合は空欄）"
     need_your_current_password: "現在のパスワードを入力してください"
     are_you_sure: "本当によろしいですか？"
@@ -49,7 +51,7 @@ ja:
   activerecord:
     attributes:
       user:
-        agreement: "同意"
+        agreement: ""
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード再入力"
@@ -73,4 +75,4 @@ ja:
             password_confirmation:
               confirmation: "パスワードが一致しません。"
             agreement:
-              accepted: "hogehoge"
+              accepted: "利用規約に同意する必要があります。"

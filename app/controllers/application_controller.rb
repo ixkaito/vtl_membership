@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
 		def require_agreement
 			if user_signed_in? && current_user.agreement != true
-				redirect_to users_edit_path
+				redirect_to users_edit_path, notice: I18n.t('message.enter_user_info')
 			end
 		end
 
