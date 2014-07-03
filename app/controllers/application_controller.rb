@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 	# before_action :authenticate_user!
 	before_action :require_agreement
 
+	skip_before_action :require_agreement, only: [:edit, :destroy]
+
 	private
 
 		def require_agreement
@@ -14,4 +16,5 @@ class ApplicationController < ActionController::Base
 				redirect_to users_edit_path
 			end
 		end
+
 end

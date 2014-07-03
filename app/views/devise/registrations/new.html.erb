@@ -3,16 +3,18 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 	<%= devise_error_messages! %>
 
-	<div><%= f.label :email, "メールアドレス" %><br />
-	<%= f.email_field :email, autofocus: true %></div>
+	<dl>
+		<dt><%= f.label :email %></dt>
+		<dd><%= f.email_field :email, autofocus: true %></dd>
 
-	<div><%= f.label :password, "パスワード" %><br />
-		<%= f.password_field :password, autocomplete: "off" %></div>
+		<dt><%= f.label :password %></dt>
+		<dd><%= f.password_field :password, autocomplete: "off" %></dd>
 
-	<div><%= f.label :password_confirmation, "パスワード再入力" %><br />
-		<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+		<dt><%= f.label :password_confirmation %></dt>
+		<dd><%= f.password_field :password_confirmation, autocomplete: "off" %></dd>
+	</dl>
 
-	<div><%= f.submit "登録" %></div>
+	<p><%= f.submit I18n.t("signup_submit") %></p>
 <% end %>
 
 <%= render "devise/shared/links" %>

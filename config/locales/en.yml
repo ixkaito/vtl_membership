@@ -19,6 +19,45 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ja:
   hello: "Hello world"
-  updatede: "Updated!"
+  home: "ホーム"
+  signup: "新規登録"
+  signup_submit: "登録"
+  login: "ログイン"
+  logout: "ログアウト"
+  user_info: "登録情報"
+  edit: "登録情報編集"
+  update: "更新"
+  updated: "更新しました。"
+  link_to_reset_password: "パスワードを忘れた場合はこちら"
+  edit_user_registration: "メールアドレス／パスワード変更"
+  leave_blank_if_you_dont_want_to_change_it: "leave blank if you don't want to change it"
+
+  activerecord:
+    attributes:
+      user:
+        agreement: "同意"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード再入力"
+        family_name: "姓"
+        given_name: "名"
+        country: "国"
+        tel: "電話番号"
+        zipcode: "郵便番号"
+        address: "住所"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "は必須項目です。"
+            confirmation_token:
+              invalid: "認証キーが不正です。"
+            password:
+              blank: "は必須項目です。"
+            password_confirmation:
+              confirmation: "パスワードが一致しません。"
+            agreement:
+              accepted: "hogehoge"

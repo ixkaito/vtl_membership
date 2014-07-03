@@ -21,14 +21,45 @@
 
 ja:
   hello: "Hello world"
-  updated: "更新しました。"
+  home: "ホーム"
+  signup: "新規登録"
+  signup_submit: "登録"
+  login: "ログイン"
+  logout: "ログアウト"
+  user_info: "登録情報"
+  edit: "登録情報編集"
+  update: "更新"
+  link_to_reset_password: "パスワードを忘れた場合はこちら"
+  edit_user_registration: "メールアドレス／パスワード変更"
+  cancel_my_account: "退会"
+  button:
+    login: "ログイン"
+    lgoout: "ログアウト"
+    signup: "登録"
+    update: "更新"
+    cancel_my_account: "退会"
+  link:
+    back: "戻る"
+  message:
+    updated: "更新しました。"
+    leave_blank: "（変更しない場合は空欄）"
+    need_your_current_password: "現在のパスワードを入力してください"
+    are_you_sure: "本当によろしいですか？"
 
   activerecord:
     attributes:
       user:
         agreement: "同意"
         email: "メールアドレス"
-
+        password: "パスワード"
+        password_confirmation: "パスワード再入力"
+        current_password: "現在のパスワード"
+        family_name: "姓"
+        given_name: "名"
+        country: "国"
+        tel: "電話番号"
+        zipcode: "郵便番号"
+        address: "住所"
     errors:
       models:
         user:

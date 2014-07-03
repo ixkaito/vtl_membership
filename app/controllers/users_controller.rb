@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 
 	skip_before_action :require_agreement
 
+	def index
+		redirect_to users_edit_path
+	end
+
 	def edit
 		@user = current_user
 	end
@@ -11,8 +15,7 @@ class UsersController < ApplicationController
 		if @user.update(user_params)
 			redirect_to users_edit_path, notice: I18n.t("updated")
 		else
-			p @user
-			render :edit
+			render "edit"
 		end
 	end
 

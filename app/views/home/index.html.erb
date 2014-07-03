@@ -1,12 +1,12 @@
-<h1>HOME</h1>
+<h1><%= I18n.t("home") %></h1>
 
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
 	こんにちは、<strong><%= current_user.email %></strong>さん。
-	<%= link_to "プロフィール編集", users_edit_path, :class => 'link_editProfile' %> |
-	<%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'link_logout'  %>
+	<%= link_to I18n.t("edit"), users_edit_path, :class => 'link_editProfile' %> |
+	<%= link_to I18n.t("logout"), destroy_user_session_path, method: :delete, :class => 'link_logout'  %>
 <% else %>
-	<%= link_to "登録", new_user_registration_path, :class => 'link_signUp'  %> |
-	<%= link_to "ログイン", new_user_session_path, :class => 'link_signIn'  %>
+	<%= link_to I18n.t("signup"), new_user_registration_path, :class => 'link_signUp'  %> |
+	<%= link_to I18n.("login"), new_user_session_path, :class => 'link_signIn'  %>
 <% end %>
 </p>
