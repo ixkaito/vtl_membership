@@ -1,17 +1,38 @@
-<h2>ログイン</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email, "メールアドレス" %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label :password, "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me, "パスワードを記憶" %></div>
-  <% end -%>
-
-  <div><%= f.submit "ログイン" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<div class="login-panel panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><b><%= I18n.t("login") %></b></h3>
+				</div>
+				<div class="panel-body">
+					<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :role => "form" }) do |f| %>
+						<fieldset>
+							<div class="form-group">
+								<%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => I18n.t('email') %>
+							</div>
+							<div class="form-group">
+								<%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => I18n.t('password') %>
+							</div>
+							<% if devise_mapping.rememberable? -%>
+								<div class="checkbox">
+									<%= f.check_box :remember_me %> <%= f.label :remember_me, I18n.t('remember_me') %>
+								</div>
+							<% end -%>
+							<%= f.submit I18n.t('button.login'), :class => "btn btn-lg btn-primary btn-block" %>
+							<br />
+							<p><%= link_to I18n.t('link.reset_password'), new_password_path(resource_name) %></p>
+						</fieldset>
+					<% end %>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><b><%= I18n.t('signup') %></b></h3>
+				</div>
+				<div class="panel-body">
+					<%= link_to I18n.t('button.signup'), new_registration_path(resource_name), :class => "btn btn-lg btn-danger btn-block" %>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -29,11 +29,14 @@ ja:
   account_info: "アカウント情報"
   edit: "アカウント情報編集"
   update: "更新"
+  email: "メールアドレス"
+  password: "パスワード"
+  remember_me: "パスワードを記憶"
   cancel_my_account: "退会"
   button:
     login: "ログイン"
     lgoout: "ログアウト"
-    signup: "登録"
+    signup: "新規登録"
     update: "更新"
     cancel_my_account: "退会"
   link:

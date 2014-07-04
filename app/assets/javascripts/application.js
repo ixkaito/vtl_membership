@@ -10,7 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery-1.10.2
+//= require bootstrap.min
+//= require sb-admin
+//= require_tree ./plugins
+//= require_tree ./demo
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require home
+//= require users
