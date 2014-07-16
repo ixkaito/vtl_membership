@@ -4,21 +4,21 @@
 
 	<%= devise_error_messages! %>
 
-	<div><%= f.label :email %><br />
-	<%= f.email_field :email, autofocus: true %></div>
+	<div><%= f.label :email %></div>
+	<div><%= f.email_field :email, autofocus: true %></div>
 
 	<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 		<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 	<% end %>
 
-	<div><%= f.label :password %> <i><%= I18n.t('message.leave_blank') %></i><br />
-		<%= f.password_field :password, autocomplete: "off" %></div>
+	<div><%= f.label :password %> <i><%= I18n.t('message.leave_blank') %></i></div>
+	<div><%= f.password_field :password, autocomplete: "off" %></div>
 
-	<div><%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+	<div><%= f.label :password_confirmation %></div>
+	<div><%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-	<div><%= f.label :current_password %><br />
-		<%= f.password_field :current_password, autocomplete: "off" %></div>
+	<div><%= f.label :current_password %></div>
+	<div><%= f.password_field :current_password, autocomplete: "off" %></div>
 
 	<div><%= f.submit I18n.t 'button.update' %></div>
 
