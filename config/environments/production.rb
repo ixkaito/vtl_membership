@@ -40,7 +40,7 @@ Rails.application.configure do
 	# config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
 	# Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-	config.force_ssl = true
+	#config.force_ssl = true
 
 	# Set to :debug to see everything in the log.
 	config.log_level = :info
@@ -79,16 +79,17 @@ Rails.application.configure do
 	config.log_formatter = ::Logger::Formatter.new
 
 	# Do not dump schema after migrations.
+	config.action_mailer.raise_delivery_errors = true
 	config.active_record.dump_schema_after_migration = false
 
 	config.action_mailer.delivery_method = :smtp
-	config.action_mailer.default_url_options = {:host => ENV['ACTION_MAILER_HOST']}
+	config.action_mailer.default_url_options = {:host => ENV['ACTION_MAILER_HOST'], :port => 80 }
 	config.action_mailer.smtp_settings = {
-		:address				=> ENV["ACTION_MAILER_ADDRESS"],
-		:user_name				=> ENV['ACTION_MAILER_USER_NAME'],
-		:password				=> ENV['ACTION_MAILER_PASSWORD'],
-		:port					=> '587',
-		:authentication			=> :plain,
-		:enable_starttls_auto	=> true
+		:address => ENV["ACTION_MAILER_ADDRESS"],
+		:user_name => ENV['ACTION_MAILER_USER_NAME'],
+		:password => ENV['ACTION_MAILER_PASSWORD'],
+		:port => 587,
+		:authentication => :login,
+		#:enable_starttls_auto	=> false
 	}
 end
